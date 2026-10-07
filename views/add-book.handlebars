@@ -1,0 +1,35 @@
+<h2>Thêm sách mới</h2>
+
+{{#if error}}
+  <div class="error">
+    {{error}}
+  </div>
+{{/if}}
+
+<form action="/books" method="POST">
+
+  <label>Mã sản phẩm</label>
+
+  <input type="text" name="productCode" placeholder="Ví dụ: 164003" required />
+
+  <small>
+    Mã sản phẩm bắt buộc phải bắt đầu bằng 164.
+  </small>
+
+  <label>Tên sách</label>
+
+  <input type="text" name="title" required />
+
+  <label>Tác giả</label>
+
+  <input type="text" name="author" required />
+
+  <label>Giá</label>
+
+  <input type="number" name="price" min="0" required />
+
+  <button type="submit">
+    Thêm sách
+  </button>
+
+</form>
